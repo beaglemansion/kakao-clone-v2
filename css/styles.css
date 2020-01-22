@@ -45,3 +45,19 @@ a {
 main {
   animation: fadeIn 0.5s ease-in-out;
 }
+
+.incoming-messages .message__timestamp {
+  opacity: 0.6;
+  font-size: 12px;
+  width: 70px;
+  margin-top: 30px;
+  margin-left: 5px;
+}
+
+.sent-message .message__timestamp {
+  opacity: 0.6;
+  font-size: 12px;
+  width: 70px;
+  margin-top: 27px;
+  margin-left: 250px;
+}
