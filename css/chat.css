@@ -254,3 +254,19 @@ https://www.toptal.com/designers/subtlepatterns/page/3/
 .message__bubble {
   margin-bottom: 3px;
 }
+
+.incoming-messages .message__timestamp {
+  opacity: 0.6;
+  font-size: 12px;
+  width: 70px;
+  margin-top: 30px;
+  margin-left: 5px;
+}
+
+.sent-message .message__timestamp {
+  opacity: 0.6;
+  font-size: 12px;
+  width: 70px;
+  margin-top: 27px;
+  margin-left: 250px;
+}
