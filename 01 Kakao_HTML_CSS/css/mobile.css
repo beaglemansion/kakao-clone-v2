@@ -1,0 +1,30 @@
+.bigScreen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fce006;
+  padding: 0px 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+
+  display: none;
+  z-index: 4;
+}
+
+/* width가 550px보다 크면 아래의 작업을 진행하도록 만듦
+즉, display:flex로 해서 노란 화면을 띄우게 만든다는 말
+평소에는 display:none으로 가려져 있다가 */
+@media screen and (min-width: 550px) {
+  .bigScreen {
+    display: flex;
+  }
+}

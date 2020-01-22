@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Friends | kakao clone</title>
+    <!-- fontawesome 사이트에서 가져온 일종의 key임 
+    이 key를 활용하여 css파일을 import하고 이모티콘을 사용함-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- 
+      status-bar part 
+    -->
+    <div class="status-bar">
+      <!-- status-bar는 부모, column은 자식 __로 부모와 자식을 구분 -->
+      <div class="status-bar__column">
+        <span class="status-bar__clock">13:53</span>
+      </div>
+      <div class="status-bar__column">
+        <i class="fas fa-clock"></i>
+        <i class="fas fa-volume-mute"></i>
+        <i class="fas fa-wifi"></i>
+        <span class="status-bar__battery-level">100%</span>
+        <i class="fas fa-battery-full"></i>
+      </div>
+    </div>
+    <!-- 
+      header part 
+    -->
+    <header class="header">
+      <div class="header__header-column">
+        <h1 class="header__title">Friends</h1>
+      </div>
+      <div class="header__header-column">
+        <span class="header__icon">
+          <i class="fas fa-search"></i>
+        </span>
+        <span class="header__icon">
+          <i class="fas fa-cog"></i>
+        </span>
+      </div>
+    </header>
+
+    <!-- 
+    내 프로필 part 
+    -->
+
+    <!-- 여기서 main은  
+    status-bar와 header 그리고 navigation-bar part를 제외한 
+    friend 페이지의 모든 내용을 담고있음. 가장 큰 주머니인듯
+    -->
+    <main class="friends">
+      <!-- header는 여러개여도 상관 없음 -->
+      <header class="friends__header">
+        <!-- "--"는 새로운 것을 표현할 때 사용함 
+        여기서 friend--lg는 사진이 조금 더 큰(large) 내 프로필 사진을 의미함-->
+        <div class="friends__friend friend">
+          <div class="friend__column">
+            <img
+              src="images/profile_img.jpg"
+              alt=""
+              class="g-avatar friend__avatar"
+            />
+            <div class="friend__content">
+              <span class="friend__name">
+                Olaf
+              </span>
+              <span class="friend__status">
+                iamnotsnowman@ggmail.com
+              </span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- 
+    나를 제외한 모든 친구들은 컬럼이 2개이다. 이것을 잊지 말 것 
+        -->
+      <!-- 
+        플러스친구 part 
+        -->
+      <div class="friends__plus">
+        <h5 class="friends__title">Plus Friend</h5>
+        <div class="friends__friend friend">
+          <div class="friend__column" id="test01">
+            <img src="images/plusfriend.JPG" alt="" class="friend__avatar" />
+            <div class="friend__content" id="plusfriends">
+              <span class="friend__name">
+                Plus Friends
+              </span>
+            </div>
+            <div class="friend__content" id="plusfriends__count">
+              <span class="friend__plusfriend count">20 </span>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 
+        내 친구 목록 part 
+        -->
+      <ul class="friends__list">
+        <h5 class="friends__title">Friends 4</h5>
+        <!-- 1번 친구 -->
+        <li class="friends__friend friend" id="special__li">
+          <!-- 친구 프로필의 첫 번째 컬럼 -->
+          <div class="friend__column">
+            <img src="images/me.png" alt="" class="friend__avatar" />
+            <div class="friend__content">
+              <span class="friend__name">
+                Beaglemansion
+              </span>
+              <span class="friend__status">
+                노마드코더 코코아톡 졸업예정
+              </span>
+            </div>
+          </div>
+
+          <!-- 친구 프로필의 두 번째 컬럼 -->
+          <div class="friend__column">
+            <div class="friend__now-listening">
+              <span
+                >기도 - 윤하
+                <i class="fas fa-play"></i>
+              </span>
+            </div>
+          </div>
+        </li>
+        <!-- 2번 친구 -->
+        <li class="friends__friend friend" id="special__li">
+          <!-- 친구 프로필의 첫 번째 컬럼 -->
+          <div class="friend__column">
+            <img src="images/coffee.JPG" alt="" class="friend__avatar" />
+            <div class="friend__content">
+              <span class="friend__name">
+                Cafe Calling
+              </span>
+              <span class="friend__status">
+                서울시 마포구 대흥로21길 4
+              </span>
+            </div>
+          </div>
+
+          <!-- 친구 프로필의 두 번째 컬럼 -->
+          <div class="friend__column">
+            <div class="friend__now-listening">
+              <span
+                >To Be Like Him - Paul Jackson Jr.
+                <i class="fas fa-play"></i>
+              </span>
+            </div>
+          </div>
+        </li>
+        <!-- 3번 친구 -->
+        <li class="friends__friend friend" id="special__li">
+          <!-- 친구 프로필의 첫 번째 컬럼 -->
+          <div class="friend__column">
+            <img src="images/elsa.JPG" alt="" class="friend__avatar" />
+            <div class="friend__content">
+              <span class="friend__name">
+                Elsa
+              </span>
+              <span class="friend__status">
+                smile :)
+              </span>
+            </div>
+          </div>
+
+          <!-- 친구 프로필의 두 번째 컬럼 -->
+          <div class="friend__column">
+            <div class="friend__now-listening">
+              <span
+                >So hot - Wonder Girls
+                <i class="fas fa-play"></i>
+              </span>
+            </div>
+          </div>
+        </li>
+        <!-- 4번 친구 -->
+        <li class="friends__friend friend" id="special__li">
+          <!-- 친구 프로필의 첫 번째 컬럼 -->
+          <div class="friend__column">
+            <img src="images/anna.JPG" alt="" class="friend__avatar" />
+            <div class="friend__content">
+              <span class="friend__name">
+                Anna
+              </span>
+              <span class="friend__status">
+                happy ;)
+              </span>
+            </div>
+          </div>
+
+          <!-- 친구 프로필의 두 번째 컬럼 -->
+          <div class="friend__column">
+            <div class="friend__now-listening">
+              <span>
+                Into the Unknown - Idina Menzel..</span>
+                <i class="fas fa-play"></i>
+              </span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </main>
+    <!-- 
+      Navigation Bar 
+    -->
+    <nav class="nav">
+      <ul class="nav__list">
+        <!-- li.nav__list-item*4>a.nav__list-link -->
+        <li class="nav__list-item">
+          <a href="friends.html" class="nav__list-link"
+            ><i class="fas fa-user"></i>
+          </a>
+        </li>
+        <li class="nav__list-item">
+          <a href="index.html" class="nav__list-link">
+            <i class="far fa-comment"></i>
+          </a>
+        </li>
+        <li class="nav__list-item">
+          <a href="find.html" class="nav__list-link">
+            <i class="fas fa-search"></i>
+          </a>
+        </li>
+        <li class="nav__list-item">
+          <a href="more.html" class="nav__list-link">
+            <i class="fas fa-ellipsis-h"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="bigScreen">
+      <span class="bigScreen__text">
+        Please, make your screen smaller!!
+      </span>
+    </div>
+  </body>
+</html>
+<!-- 오늘 배운 것 20.01.06
+
+1. 반복해서 사용하는 부분부터 쪼개서 먼저 만든다 (status-bar, bottom 등등)
+2. 자식과 부모는 __로 구분한다
+  부모__자식 header__column
+3. 단축키 배움 
+  <i class="fas fa-wifi"></i>는 i.fas.fa-wifi 입력하고 tab누르면 완성됨
+4. fontawesome 사용방법을 배움. 
+  kit받고 free 아이콘만 골라서 사용하기. head에 link입력 필수!
+5. fas는 fontawesome solid 속이 검은색으로 꽉찬 이모티콘, 
+  far는 fontawesome regular 속이 비어있는 이모티콘을 의미함
+  + fab는 fontawesome brand 브랜드 이모티콘을 의미
+6. size도 바꿀 수 있음. 
+  <i class="fas fa-cog fa-5x"></i> 이런식으로 5배 크게
+  단축키로는 i.fas.fa-cog.fa-5x
+7. div와 span 사용 차이 이유 
+  span 태그는 icon 을 각각 개별적으로 이동시켜야 할 경우에 사용
+  div 태그는 icon 여러개를 덩어리째 움직이게 할 경우에 사용 
+8. 넘어가는 link만들 때 주의할 것
+  <a></a> 태그 안에 제대로 넣어야 클릭할 때 넘어간다... 조심하기
+9. main은 브라우져내에서 이 부분부터 메인이라고 지정되는 부분임?? 디자인측면에서
+10. 모든 폴더와 파일명은 전부 소문자로 써야한다.
+11. 태그의 의미
+    div -> box
+    span -> box for text
+    ul -> list
+    li -> inside of list.
+12. 단축키 ctrl + d
+    누를 때 마다 같은 단어를 찾아줌 
+    동시에 수정할 때 유리함 alt보다 더 좋은듯
+
+오늘 배운 것 20.01.07
+
+1. 궁금하던 class 에서의 space 의미 
+    If you put space on a class that would be two classes.
+    1) 'something__like__this' is one class
+    2) ' something like this ' are three classes
+    * 참고 사이트
+    https://stackoverflow.com/questions/13808846/html-class-attribute-with-spaces-it-is-a-w3c-valid-class
+2. more.html의 main을 직접 구조짜보고 만들어봄.
+  class 명에서 nico와 약간 차이가 있었지만 큰 문제는 아닐듯
+  오히려 nico의 class명이 더 헷갈리기도 한다. 
+3. 이전 페이지로 돌아가기
+  a href="javascript:history.back();"
+  
+
+  
+오늘 배운 것 20.01.08
+
+1. 시작할 때 css 파일을 reset시켜주는 것이 좋다
+  브라우저마다 default값이 다르고, 직접 일일이 수정하면 귀찮으니까
+  reset css 검색해서 복붙하고, import 시켜주는 방법 익힘
+  reset css사용하면 모든 default값이 0이 됨
+
+  reset.css 쓰고싶지 않으면 즉 default=0으로 만들고싶지 않으면
+  normalize.css같은 것을 복붙해도 됨 그건 자기 선택이니까
+
+2. justify-content햇을 때 바로 아래 element들만 선택해서 위치를 이동시킴
+  어차피 하위 element묶음으로 만든거라 전체가 움직이게 만드는 것이지만
+  적는 것은 1번만 적음 
+
+3. text font 조정하기
+  google font에 접속해서 원하는 font를 선택하고, customize에서 bold같은 옵션 선택
+  styles.css에 붙여넣기 했음 
+  웹 전체에 사용하기 위해서 styles.css에 위치시킨 것 같음 
+  그리고 font-family로 사용함
+
+4. 하위 태그 스타일 변경하는 방법
+  1) status-bar class 아래에 i 태그가 있는 경우
+  .status-bar i {
+  font-size: 14px;
+  }
+
+  2) status-bar class 아래 status-bar__battery-level class가 있는 경우
+  .status-bar .status-bar__battery-level {
+  margin-left: 4px;
+  }
+  }
+
+5. box-sizing: border-box 사용법
+  padding과 border 모두 width에 포함되지 않습니다
+  만약 매번 이렇게 계산하는 것이 싫다면 
+  box-sizing: border-box를 주면 됩니다. 
+  그러면 width와 height는 content의 너비가 아니라 
+  border까지 포함한 태그의 너비가 됩니다
+
+
+
+
+  오늘 알게된 것 20.01.10 
+
+1. box-shadow
+    box에 그림자효과를 주는 css문법
+    * 참고사이트: https://www.codingfactory.net/10628
+    box-shadow: 0px 0px 15px #95a5a6;
+    가로/세로 위치, 그림자 흐릿한 정도15px, 그림자색깔
+
+2. border-radius
+    바깥 테두리의 모서리를 둥글게 만드는 css문법
+    원래 top,bottom,right,left 각각 지정 가능하지만
+    border-radius로 한 번에 변경 가능함
+
+3. A에 hover했을 때 B를 변경시키는 방법!
+
+    .btn:hover + .pic { ....} 사용
+
+    .btn:hover + .pic {
+    border: 5px solid black;
+    transform: rotate(135deg) scale(0.5, 0.5);
+    }
+
+4. font 두께 조절
+  font-weight: 600;
+  
+5. 커서를 포인터로 띄우게 하는 방법
+  cursor: pointer;
+
+6. color: inherit;
+    부모 element로부터 색깔을 받아온다는 의미
+-->
